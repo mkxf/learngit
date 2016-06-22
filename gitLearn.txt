@@ -1,0 +1,37 @@
+1 创建一个版本库非常简单，首先，选择一个合适的地方，创建一个空目录：
+
+$ mkdir learngit
+$ cd learngit
+$ pwd
+pwd命令用于显示当前目录
+
+2 第二步，通过git init命令把这个目录变成Git可以管理的仓库：
+$ git init
+
+3 如果你没有看到.git目录，那是因为这个目录默认是隐藏的，用ls -ah命令就可以看见
+
+第一步，用命令git add告诉Git，把文件添加到仓库：
+
+$ git add readme.txt
+
+第二步，用命令git commit告诉Git，把文件提交到仓库：
+
+$ git commit -m "wrote a readme file"
+
+为什么Git添加文件需要add，commit一共两步呢
+	因为commit可以一次提交很多文件，所以你可以多次add不同的文件
+
+
+小结
+
+现在总结一下今天学的两点内容：
+
+初始化一个Git仓库，使用git init命令。
+
+添加文件到Git仓库，分两步：
+
+第一步，使用命令git add <file>，注意，可反复多次使用，添加多个文件；
+
+第二步，使用命令git commit，完成。
+
+如果git status告诉你有文件被修改过，用git diff可以查看修改内容
