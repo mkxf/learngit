@@ -99,7 +99,7 @@ Add Key
 另一个办法是自己动手，搭一个Git服务器，因为是你自己的Git服务器
 
 
-============
+============ 推送远程库
 现在，我们根据GitHub的提示，把本地仓库的内容推送到GitHub仓库
 在本地的learngit仓库下运行命令：
 
@@ -110,4 +110,27 @@ $ git remote add origin git@github.com:mkxf/learngit.git
 
 $ git push -u origin master
 把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程
-(是本地库以及提交的东西推送进去)
+(是本地库以及提交的东西推送进去
+ 验证正确：
+ 1. git add learngit.txt
+ 2. git commit -m 'edit for remote before add at local'
+  此时刷新 github， 上边此文件没有刷新
+ 3. git push oriLearngit master
+  oriLearngit 是远程库的名字，在创建的时候起的
+  【 
+  $ git remote add oriLearngit git@github.com:mkxf/learngit.git 
+  】
+  刷新 github，显示新加内容。
+  )
+
+  ----------
+new branch dev
+$ git branch -b dev
+mean 2:
+$ git branch dev
+$ git checkout -b dev
+creat and switch
+now is in dev branch.
+$ gti branch 
+show current branch.
+------------
