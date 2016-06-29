@@ -4,5 +4,5 @@ Git has a mutable index called stage.
 Git tracks changes. 
 for sm.
 Creating a new branch is quick AND simple.
-==== branch bg-101 == 
+==== branch bg-1 no add== 
 
