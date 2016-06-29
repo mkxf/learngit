@@ -237,8 +237,9 @@ stash功能，可以把当前工作现场“储藏”起来，等以后恢复现
 $ git stash
 需要先 git add 到 暂存区 （-> 当前分支【工作区-> 版本库（暂存区，分支）】）
 才会隐藏
-----bug  begin----
-1. 正在dev 分支上干活，修改readme.txt 文件， 然后 git add
+
+----bug 分支 begin----
+1. 正在dev 分支上干活，修改readme.txt 文件
 2. 有bug 需要处理，但现在的文件和bug无关，需要先另保存，在正式版本上处理bug
 	执行 git stash，把当前工作现场“储藏”起来
 3. 假定需要在master分支上修复，就从master创建临时分支
@@ -267,7 +268,16 @@ $ git stash
 	$git stash pop  恢复的同时把stash内容也删了
 
 	再用git stash list查看，就看不到任何stash内容
-end
- 1. 先在当前分支 
+end 2
+ 1. 先在当前分支dev 保存现场 git stash 
+  到主分支master,创建bug分支，处理，提交，然后回到master，再合并bug分支
+	$ git merge --no-ff -m 'fix and merge to master' bg1
+ 删除bug 分支，bug 处理结束。
+ 回到dev分支，回复现场： 可以先查看现场状态$git stash list，然后回复
+ $git stash pop 【stash@{0}】 ,开始工作.
+ ----------------bug 分支end-------
+ ==================================================================
+
+  
 
 
