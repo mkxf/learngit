@@ -246,3 +246,4 @@ $ git checkout master
 
 $ git add readme.txt 
 $ git commit -m "fix bug 101"
+---------new --------
